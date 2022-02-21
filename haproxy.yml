@@ -1,0 +1,8 @@
+---
+- name: Install HAProxy
+  hosts: webservers
+  tasks:
+  - name: Install haproxy via dnf
+    dnf:
+      name: haproxy
+      state: installed
