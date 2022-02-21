@@ -1,6 +1,7 @@
 ---
 - name: Install HAProxy
-  hosts: webservers
+  hosts: loadbalancers
+  become: true
   tasks:
   - name: Install haproxy via dnf
     dnf:
